@@ -18,7 +18,7 @@ keyboard = InlineKeyboardMarkup(
     [
             [
                 InlineKeyboardButton(text="• الـقـائـمـه♪", callback_data="cbmenu"),
-                InlineKeyboardButton("• الـتـحـديـثـات♪",url=f"https://t.me/FA9SH"),
+                InlineKeyboardButton("• الـتـحـديـثـات♪",url=f"https://t.me/SONIC_source"),
             ],
             [
                 InlineKeyboardButton(
@@ -126,7 +126,7 @@ async def stream_end_handler(_, u: Update):
         else:
             await bot.send_message(
                 chat_id,
-                f"💡 **تم التخطي الئ المسار التالي**\n\n🗂 **الاسم:** [{op[0]}]({op[1]}) | `{op[2]}`\n💭 **المجموعه:** `{chat_id}`",
+                f"💡 **تم تشغيل المسار التالي**\n\n🗂 **الاسم:** [{op[0]}]({op[1]}) | `{op[2]}`\n💭 **المجموعه:** `{chat_id}`",
                 disable_web_page_preview=True,
                 reply_markup=keyboard,
             )
