@@ -19,7 +19,7 @@ from config import (
 async def cbstart(_, query: CallbackQuery):
     await query.answer("الصفحه الرئيسيه")
     await query.edit_message_text(
-        f"""✨ **مرحبا عزيزي »「 [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) 」!**\n
+        f"""✨ **هَــْـِْـْْـِلاّ »「 [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) 」!**\n
 💭 **᥀︙انا بوت استطيع تشغيل الاغاني والموسيقى في المكالمات  الصوتية! 
 
 ᥀︙ لمعرفة اوامر هذا البوت اضغط على » ‹الاوامر الاساسية›!
@@ -40,7 +40,7 @@ async def cbstart(_, query: CallbackQuery):
                         "‹ كروب الدعم ›", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "‹ قناة السورس ›", url=f"https://t.me/EITHON1"
+                        "‹ قناة السورس ›", url=f"https://t.me/SONIC_source"
                     ),
                 ],
                 [
