@@ -21,7 +21,7 @@ from pyrogram.types import (
 )
 
 
-@Client.on_message(command(["/reload", f"تحديث", "حديث"]) & other_filters)
+@Client.on_message(command(["/reload", f"تحديث", "حدث"]) & other_filters)
 @authorized_users_only
 async def update_admin(client, message):
     global admins
@@ -61,7 +61,7 @@ async def skip(c: Client, m: Message):
                 chat_id,
                 photo=image,
                 reply_markup=InlineKeyboardMarkup(buttons),
-                caption=f"⏭ **تم التخطي الئ المسار التالي**\n\n🏷 **الاسم:** [{op[0]}]({op[1]})\n💭 **المجموعة:** `{chat_id}`\n💡 **الحالة:** `شغال`\n🎧 **طلب بواسطة:** {m.from_user.mention()}",
+                caption=f"⏭ **تم تشغيل المسار التالي**\n\n🏷 **الاسم:** [{op[0]}]({op[1]})\n💭 **المجموعة:** `{chat_id}`\n💡 **الحالة:** `شغال`\n🎧 **طلب بواسطة:** {m.from_user.mention()}",
             )
     else:
         skip = m.text.split(None, 1)[1]
