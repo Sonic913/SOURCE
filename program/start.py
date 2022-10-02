@@ -62,7 +62,7 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_photo(
         photo=f"{BOT_PHOTO}",
-        caption=f"""✨ **هَــْـِْـْْـِلاّ  » {message.from_user.mention()} !**\n
+        caption=f"""✨ **هَــْـِْـْْـِلاّ » {message.from_user.mention()} !**\n
 💭 **᥀︙انا بوت استطيع تشغيل الاغاني والموسيقى في المكالمات  الصوتية! 
 
 ᥀︙ لمعرفة اوامر هذا البوت اضغط على » اوامر التشغيل!
