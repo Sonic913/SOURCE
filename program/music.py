@@ -44,7 +44,7 @@ async def play(c: Client, m: Message):
     await m.delete()
     do = requests.get(f"https://api.telegram.org/bot{BOT_TOKEN}/getChatMember?chat_id=@{UPDATES_CHANNEL}&user_id={m.from_user.id}").text
     if do.count("left") or do.count("Bad Request: user not found"):
-        await m.reply_text(f" ** ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉**\n@{UPDATES_CHANNEL}\n» **اشتࢪك بقناة البوت لتستطيع تشغيل الاغاني**")
+        await m.reply_text(f" ** ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉**\n@{UPDATES_CHANNEL}\n» **اشتࢪك بقناة البوت لتستطيع تشغيل الموسيقى**")
     else:
         replied = m.reply_to_message
         chat_id = m.chat.id
@@ -132,7 +132,7 @@ async def play(c: Client, m: Message):
                     await suhu.delete()
                     await m.reply_photo(
                         photo=f"{IMG_1}",
-                        caption=f"💡 ***-› اެبشࢪ ضفتهاެ ݪلانتضاࢪ** `{pos}`\n\n🏷 **-› اެݪاެسم:** [{songname}]({link})| موسيقى`\n💭**-› اެيدي اެݪمحاެدثةه:** `{chat_id}`\n🎧 **-› طݪب اެݪحݪۅٛ:** {m.from_user.mention()}",
+                        caption=f"💡 ***-› اެبشࢪ ضفتهاެ ݪلانتضاࢪ** `{pos}`\n\n🏷 **-› اެݪاެسم:** [{songname}]({link})| موسيقى`\n💭**-› اެيدي اެݪمحاެدثةه:** `{chat_id}`\n🎧 **-› طݪب :** {m.from_user.mention()}",
                         reply_markup=keyboard,
                     )
                 else:
@@ -150,7 +150,7 @@ async def play(c: Client, m: Message):
                         requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                         await m.reply_photo(
                             photo=f"{IMG_2}",
-                            caption=f"-› اެݪحِاެݪةِ : تَمِ اެݪتَشِغِيَݪ بَنِجَاެحِ\n🏷 -› اެݪاެسم: [{songname}]({link})\n💭-› اެيدي اެݪمحاެدثةه: {chat_id}`\n💡 ** الحالة:**ݪ بَنِجَاެحِ`\n🎧 **-› طݪب اެݪحݪۅٛ:** {requester}\n📹 ** نِوِعٌ أّلَبِثّ:** `موسيقى",
+                            caption=f"-› اެݪحِاެݪةِ : تَمِ اެݪتَشِغِيَݪ بَنِجَاެحِ\n🏷 -› اެݪاެسم: [{songname}]({link})\n💭-› اެيدي اެݪمحاެدثةه: {chat_id}`\n💡 ** الحالة:**ݪ بَنِجَاެحِ`\n🎧 **-› طݪب :** {requester}\n📹 ** نِوِعٌ أّلَبِثّ:** `موسيقى",
                             reply_markup=keyboard,
                         )
                     except Exception as e:
@@ -185,7 +185,7 @@ async def play(c: Client, m: Message):
                                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                                 await m.reply_photo(
                                     photo=thumbnail,
-                                    caption=f"💡 ***-› اެبشࢪ ضفتهاެ ݪلانتضاࢪ** `{pos}`\n\n🏷 **-› اެݪاެسم:** [{songname}]({url})| موسيقى`\n**⏱ أّلَمَدِ ةّ:** `{duration}`\n🎧 **-› طݪب اެݪحݪۅٛ:** {requester}",
+                                    caption=f"💡 ***-› اެبشࢪ ضفتهاެ ݪلانتضاࢪ** `{pos}`\n\n🏷 **-› اެݪاެسم:** [{songname}]({url})| موسيقى`\n**⏱ أّلَمَدِ ةّ:** `{duration}`\n🎧 **-› طݪب :** {requester}",
                                     reply_markup=keyboard,
                                 )
                             else:
@@ -239,7 +239,7 @@ async def play(c: Client, m: Message):
                             )
                             await m.reply_photo(
                                 photo=thumbnail,
-                                caption=f"💡 ***-› اެبشࢪ ضفتهاެ ݪلانتضاࢪ** `{pos}`\n\n🏷 **-› اެݪاެسم:** [{songname}]({url})| موسيقى`\n**⏱ أّلَمَدِ ةّ:** `{duration}`\n🎧 **-› طݪب اެݪحݪۅٛ:** {requester}",
+                                caption=f"💡 ***-› اެبشࢪ ضفتهاެ ݪلانتضاࢪ** `{pos}`\n\n🏷 **-› اެݪاެسم:** [{songname}]({url})| موسيقى`\n**⏱ أّلَمَدِ ةّ:** `{duration}`\n🎧 **-› طݪب :** {requester}",
                                 reply_markup=keyboard,
                             )
                         else:
@@ -257,7 +257,7 @@ async def play(c: Client, m: Message):
                                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                                 await m.reply_photo(
                                     photo=thumbnail,
-                                    caption=f"🏷 **-› اެݪاެسم:** [{songname}]({url})\n**⏱ أّلَمَدِ ةّ𖠈:** `{duration}`\n💡 ** الحالة:** `يشغل`\n🎧 **-› طݪب اެݪحݪۅٛ:** {requester}\n📹 ** نِوِعٌ أّلَبِثّ:** `موسيقى`",
+                                    caption=f"🏷 **-› اެݪاެسم:** [{songname}]({url})\n**⏱ أّلَمَدِ ةّ𖠈:** `{duration}`\n💡 ** الحالة:** `يشغل`\n🎧 **-› طݪب :** {requester}\n📹 ** نِوِعٌ أّلَبِثّ:** `موسيقى`",
                                     reply_markup=keyboard,
                                 )
                             except Exception as ep:
