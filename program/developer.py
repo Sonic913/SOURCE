@@ -31,7 +31,7 @@ async def edit_or_reply(msg: Message, **kwargs):
     await func(**{k: v for k, v in kwargs.items() if k in spec})
 
 
-@Client.on_message(command(["eval", f"eval{bname}"]) & ~filters.edited)
+@Client.on_message(command(["/eval", f"eval{bname}"]) & ~filters.edited)
 @sudo_users_only
 async def executor(client, message):
     if len(message.command) < 2:
@@ -101,13 +101,13 @@ async def executor(client, message):
         await edit_or_reply(message, text=final_output, reply_markup=keyboard)
 
 
-@Client.on_callback_query(filters.regex(r"runtime"))
+@Client.on_callback_query(filters.regex(r"/runtime"))
 async def runtime_func_cq(_, cq):
     runtime = cq.data.split(None, 1)[1]
     await cq.answer(runtime, show_alert=True)
 
 
-@Client.on_message(command(["sh", f"sh{bname}"]) & ~filters.edited)
+@Client.on_message(command(["/sh", f"sh{bname}"]) & ~filters.edited)
 @sudo_users_only
 async def shellrunner(client, message):
     if len(message.command) < 2:
@@ -170,7 +170,7 @@ async def shellrunner(client, message):
         await edit_or_reply(message, text="`OUTPUT:`\n`no output`")
 
 
-@Client.on_message(command(["leavebot", f"خروج"]) & ~filters.edited)
+@Client.on_message(command(["/leavebot", f"خروج"]) & ~filters.edited)
 @sudo_users_only
 async def bot_leave_group(_, message):
     if len(message.command) != 2:
