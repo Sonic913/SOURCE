@@ -62,12 +62,12 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_photo(
         photo=f"{BOT_PHOTO}",
-        caption=f"""✨ **هَــْـِْـْْـِلاّ » {message.from_user.mention()} !**\n
-💭 **᥀︙انا بوت استطيع تشغيل الاغاني والموسيقى في المكالمات  الصوتية! 
+        caption=f"""✨ **مرحباً » {message.from_user.mention()} !**\n
+ **⌔︙انا بوت استطيع تشغيل الاغاني والموسيقى في المكالمات  الصوتية! 
 
-᥀︙ لمعرفة اوامر هذا البوت اضغط على » اوامر التشغيل!
+⌔︙ لمعرفة اوامر هذا البوت اضغط على › اوامر التشغيل!
 
-᥀︙ لمعرفة طريقة تشغيل هذا البوت اضغط على » طريقة التشغيل!
+⌔︙ ماذا تنتظر اضغط على › اضفني الى مجموعتك و استمتع!
 """,
         reply_markup=InlineKeyboardMarkup(
             [
@@ -81,7 +81,7 @@ async def start_(client: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "‹ كروب الدعم › ", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "‹ مجموعة الدعم › ", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
                         "‹ قناة السورس ›", url=f"https://t.me/SONIC_source"
@@ -134,9 +134,9 @@ async def get_uptime(client: Client, message: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
-        "🤖 bot status:\n"
-        f"• **uptime:** `{uptime}`\n"
-        f"• **start time:** `{START_TIME_ISO}`"
+        "🤖 حالة البوت:\n"
+        f"• **وقت التشغيل:** `{uptime}`\n"
+        f"• **وقت البدء:** `{START_TIME_ISO}`"
     )
 
 
@@ -169,7 +169,7 @@ async def new_chat(c: Client, m: Message):
                     [
                         [
                             InlineKeyboardButton("‹ قناة البوت ›", url=f"https://t.me/{UPDATES_CHANNEL}"),
-                            InlineKeyboardButton("‹ كروب الدعم ›", url=f"https://t.me/{GROUP_SUPPORT}")
+                            InlineKeyboardButton("‹ مجموعة الدعم ›", url=f"https://t.me/{GROUP_SUPPORT}")
                         ],
                         [
                             InlineKeyboardButton(
