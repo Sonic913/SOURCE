@@ -67,13 +67,13 @@ async def start_(client: Client, message: Message):
 
 ⌔︙ لمعرفة اوامر هذا البوت اضغط على › اوامر التشغيل!
 
-⌔︙ ماذا تنتظر اضغط على › اضفني الى مجموعتك و استمتع!
+⌔︙ لمعرفة اوامر تشغيل هذا البوت اضغط على › طريقة التشغيل!
 """,
         reply_markup=InlineKeyboardMarkup(
             [
 
                 [
-                    InlineKeyboardButton("", callback_data="cbhowtouse")
+                    InlineKeyboardButton("طريقة التشغيل", callback_data="cbhowtouse")
                     ],
                 [
                     InlineKeyboardButton("‹ اوامر التشغيل › ", callback_data="cbcmds"),
