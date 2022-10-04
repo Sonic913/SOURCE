@@ -21,9 +21,9 @@ async def join_chat(c: Client, m: Message):
                 "https://t.me/+", "https://t.me/joinchat/"
             )
             await user.join_chat(invitelink)
-            return await user.send_message(chat_id, "انضممت هنا كما طلبت")
+            return await user.send_message(chat_id, "✅ انضممت للمجموعة بنجاح")
     except UserAlreadyParticipant:
-        return await user.send_message(chat_id, "انا بالفعل موجود هنا 😐")
+        return await user.send_message(chat_id, "🙂 قد انضممت بالمجموعة مسبقاً")
 
 
 @Client.on_message(
@@ -54,23 +54,23 @@ async def leave_all(client, message):
     left = 0
     failed = 0
     
-    msg = await message.reply("🔄 Userbot leaving all Group !")
+    msg = await message.reply("جارِ مغادرة الحساب المساعد من كل المجموعات انتظر قليلاً")
     async for dialog in user.iter_dialogs():
         try:
             await user.leave_chat(dialog.chat.id)
             left += 1
             await msg.edit(
-                f"Userbot leaving all Group...\n\nLeft: {left} chats.\nFailed: {failed} chats."
+                f".... جارِ المغادرة من كل المجموعات\n\n✅ تمت المغادره: {left} chats.\n❌ فشلت المغادره: {failed} chats."
             )
         except BaseException:
             failed += 1
             await msg.edit(
-                f"Userbot leaving...\n\nLeft: {left} chats.\nFailed: {failed} chats."
+                f".... جارِ المغادره من كل المجموعات\n\n✅ تمت المغادره: {left} chats.\n❌ فشلت المغادره: {failed} chats."
             )
         await asyncio.sleep(0.7)
     await msg.delete()
     await client.send_message(
-        message.chat.id, f"✅ Left from: {left} chats.\n❌ Failed in: {failed} chats."
+        message.chat.id, f"✅ اكتملت عملية المغادره من: {left} chats.\n❌ فشلت عملية المغادره من: {failed} chats."
     )
 
 
