@@ -1,7 +1,7 @@
 {
-    "name": "Ξ𝗜𝗧𝗛𝗢𝗡™ ايثون",
+    "name": "SONIC SOURCE⚡",
     "description": "Telegram bot for Streaming Video & Music trought the Telegram Group Video Chat, powered by PyTgCalls and Pyrogram",
-    "logo": "https://telegra.ph/file/e9258f1ae714616d2cdbb.jpg",
+    "logo": "https://telegra.ph/file/d6297ee78b8889a8d8ed1.jpg",
     "keywords": [
         "py-tgcalls",
         "telegram bot",
@@ -11,66 +11,66 @@
         "mongodb",
         "pyrogram"
     ],
-    "website": "https://t.me/EITHON1",
+    "website": "https://t.me/SONIC_source",
     "repository": "https://github.com/pqnzbmmwQ92/ll",
-    "success_url": "https://t.me/EITHMU1",
+    "success_url": "https://t.me/SONIC_source",
     "env": {
         "API_ID": {
-            "description": "قم بوضع الايبي ايدي هنا",
+            "description": "ضع الايبي ايدي هنا",
             "required": true
         },
         "API_HASH": {
-            "description": "قم بوضع الايبي هاش",
+            "description": "ضع الايبي هاش هنا",
             "required": true
         },
         "BOT_TOKEN": {
-            "description": "قم بوضع توكن البوت الخاص بك هنا",
+            "description": "ضع توكن البوت هنا",
             "required": true
         },
         "BOT_USERNAME": {
-            "description": "قم بوضع يوزر بوتك بدون علامة @",
+            "description": "ضع معرف البوت بدون علامة @",
             "required": true,
             "value": ""
         },
         "ASSISTANT_NAME": {
-            "description": "قم بوضع يوزر الحساب المساعد بدون علامة @",
+            "description": "ضع معرف الحساب المساعد بدون علامة @",
             "required": true,
             "value": ""
         },
         "SESSION_NAME": {
-            "description": "قم بوضع كود تيرمكس هنا",
+            "description": "ضع كود الترمكس هنا",
             "required": true
         },
         "SUDO_USERS": {
-            "description": "قم بوضع ايدي المطور الاساسي",
+            "description": "ضع ايدي المطور هنا",
             "required": true,
             "value": ""
         },
         "GROUP_SUPPORT": {
-            "description": "ضع هنا يوزر جروبك بدون علامة @",
+            "description": "ضع هنا معرف مجموعة الدعم بدون علامة @",
             "required": true,
             "value": ""
         },
         "UPDATES_CHANNEL": {
-            "description": "ضع هنا يوزر قناتك بدون علامة @",
+            "description": "ضع هنا معرف قناتك بدون علامة @",
             "required": true,
             "value": ""
         },
         "OWNER_NAME": {
-            "description": "ضع هنا يوزر المطور بدون علامة @",
+            "description": "ضع هنا معرف المطور بدون علامة @",
             "required": true,
             "value": ""
         },
         "BOT_PHOTO": {
-            "description": "ضع لينك صورة البوت ",
+            "description": "ضع رابط صورة البوت هنا",
             "required": true
         },
         "DEV_PHOTO": {
-            "description": "ضع لينك صورة حساب مطور البوت",
+            "description": "ضع رابط صورة حساب مطور البوت هنا",
             "required": true
         },
         "DEV_NAME": {
-            "description": "ضع اسم حساب التليجرام الخاص بالمطور",
+            "description": "ضع اسم حساب المطور هنا",
             "required": true
         },
         "ALIVE_NAME": {
