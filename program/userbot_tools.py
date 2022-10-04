@@ -41,7 +41,7 @@ async def leave_chat(_, m: Message):
     except UserNotParticipant:
         return await _.send_message(
             chat_id,
-            "❌ غادر الحساب المساعد المجموعه بالفعل",
+            "❌ غادر الحساب المساعد المجموعه مسبقاً",
         )
 
 
