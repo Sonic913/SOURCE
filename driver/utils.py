@@ -17,7 +17,7 @@ from pytgcalls.types.stream import StreamAudioEnded
 keyboard = InlineKeyboardMarkup(
     [
             [
-                InlineKeyboardButton(text="• الـقـائـمـه♪", callback_data="cbmenu"),
+                InlineKeyboardButton(text="• التحكم♪", callback_data="cbmenu"),
                 InlineKeyboardButton("• الـتـحـديـثـات♪",url=f"https://t.me/SONIC_source"),
             ],
             [
