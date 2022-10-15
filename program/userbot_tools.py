@@ -60,17 +60,17 @@ async def leave_all(client, message):
             await user.leave_chat(dialog.chat.id)
             left += 1
             await msg.edit(
-                f".... جارِ المغادرة من كل المجموعات\n\n✅ تمت المغادره: {left} chats.\n❌ فشلت المغادره: {failed} chats."
+                f".... جارِ المغادرة من كل المجموعات\n\n✅ تمت المغادره من: {left} مجموعه.\n❌ فشلت المغادره من: {failed} مجموعه."
             )
         except BaseException:
             failed += 1
             await msg.edit(
-                f".... جارِ المغادره من كل المجموعات\n\n✅ تمت المغادره: {left} chats.\n❌ فشلت المغادره: {failed} chats."
+                f".... جارِ المغادره من كل المجموعات\n\n✅ تمت المغادره من: {left} مجموعه.\n❌ فشلت المغادره من: {failed} مجموعه."
             )
         await asyncio.sleep(0.7)
     await msg.delete()
     await client.send_message(
-        message.chat.id, f"✅ اكتملت عملية المغادره من: {left} chats.\n❌ فشلت عملية المغادره من: {failed} chats."
+        message.chat.id, f"✅ اكتملت عملية المغادره من: {left} مجموعه.\n❌ فشلت عملية المغادره من: {failed} مجموعه."
     )
 
 
