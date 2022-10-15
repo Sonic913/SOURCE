@@ -148,6 +148,7 @@ async def cbadmin(_, query: CallbackQuery):
     )
 
 @Client.on_callback_query(filters.regex("cbsudo"))
+@sudo_users_only
 async def cbsudo(_, query: CallbackQuery):
     await query.answer("اوامر المطور")
     await query.edit_message_text(
