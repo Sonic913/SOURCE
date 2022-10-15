@@ -127,7 +127,7 @@ async def stream_end_handler(_, u: Update):
             await bot.send_message(
                 chat_id,
                 f"💡 **تم تشغيل المسار التالي**\n\n🗂 **الاسم:** [{op[0]}]({op[1]}) | `{op[2]}`",
-                disable_web_page_preview=False,
+                disable_web_page_preview=True,
                 reply_markup=keyboard,
             )
     else:
