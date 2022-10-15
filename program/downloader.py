@@ -135,7 +135,7 @@ async def vsong(client, message):
         print(e)
 
 
-@Client.on_message(command(["lyric", f"بحث"]))
+@Client.on_message(command(["lyric", f"ابحث"]))
 async def lyrics(_, message):
     try:
         if len(message.command) < 2:
