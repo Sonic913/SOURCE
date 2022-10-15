@@ -12,20 +12,6 @@ from pytgcalls.types.input_stream.quality import (
     MediumQualityVideo,
 )
 from pytgcalls.types.stream import StreamAudioEnded
-from youtubesearchpython import VideosSearch
-
-def ytsearch(query: str):
-    try:
-        search = VideosSearch(query, limit=1).result()
-        data = search["result"][0]
-        songname = data["title"]
-        url = data["link"]
-        duration = data["duration"]
-        thumbnail = f"https://i.ytimg.com/vi/{data['id']}/hqdefault.jpg"
-        return [songname, url, duration, thumbnail]
-    except Exception as e:
-        print(e)
-        return 0
 
 keyboard = InlineKeyboardMarkup(
     [
@@ -139,7 +125,7 @@ async def stream_end_handler(_, u: Update):
         else:
             await bot.send_message(
                 chat_id,
-                f"💡 **تم تشغيل المسار التالي**\n\n🗂 **العنوان : ** [{op[0]}]({op[1]}) | `{op[2]}`\n**⏱ المده :** `{duration}`",
+                f"💡 **تم تشغيل المسار التالي**\n\n🗂 **العنوان : ** [{op[0]}]({op[1]}) | `{op[2]}`",
                 disable_web_page_preview=True,
                 reply_markup=keyboard,
             )
