@@ -87,7 +87,7 @@ def song(_, message):
 
 
 @Client.on_message(
-    command(["/vsong", f"/vsong@{bn}", f"تنزيل"]) & ~filters.edited
+    command(["/vsong", f"/vsong@{bn}", f"نزل"]) & ~filters.edited
 )
 async def vsong(client, message):
     ydl_opts = {
