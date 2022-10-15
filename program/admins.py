@@ -31,7 +31,7 @@ async def update_admin(client, message):
         new_admins.append(u.user.id)
     admins[message.chat.id] = new_admins
     await message.reply_text(
-        "✅ تم تحديث البوت بنجاح **  \n✅ ** تم تحديث قائمة المسؤولين ** ** ** "
+        "✅ تم تحديث البوت بنجاح **  \n✅ ** تم تحديث قائمة المشرفين ** ** ** "
     )
 
 
@@ -61,7 +61,7 @@ async def skip(c: Client, m: Message):
                 chat_id,
                 photo=image,
                 reply_markup=InlineKeyboardMarkup(buttons),
-                caption=f"⏭ **تم تشغيل المسار التالي**\n\n🏷 **الاسم:** [{op[0]}]({op[1]})\n💭 **المجموعة:** `{chat_id}`\n💡 **الحالة:** `شغال`\n🎧 **طلب بواسطة:** {m.from_user.mention()}",
+                caption=f"⏭ **تم تشغيل المسار التالي**\n\n🏷 **العنوان : ** [{op[0]}]({op[1]})\n🎧 **طلب بواسطة:** {m.from_user.mention()}",
             )
     else:
         skip = m.text.split(None, 1)[1]
@@ -175,7 +175,7 @@ async def unmute(client, m: Message):
 async def cbpause(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 المسؤول الوحيد الذي لديه إذن إدارة الدردشات الصوتية يمكنه النقر على هذا الزر !", show_alert=True)
+        return await query.answer("💡 المشرف الوحيد الذي لديه إذن إدارة الدردشات الصوتية يمكنه النقر على هذا الزر ", show_alert=True)
     chat_id = query.message.chat.id
     if chat_id in QUEUE:
         try:
@@ -194,7 +194,7 @@ async def cbpause(_, query: CallbackQuery):
 async def cbresume(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 المسؤول الوحيد الذي لديه إذن إدارة الدردشات الصوتية يمكنه النقر على هذا الزر !", show_alert=True)
+        return await query.answer("💡 المشرف الوحيد الذي لديه إذن إدارة الدردشات الصوتية يمكنه النقر على هذا الزر ", show_alert=True)
     chat_id = query.message.chat.id
     if chat_id in QUEUE:
         try:
@@ -213,7 +213,7 @@ async def cbresume(_, query: CallbackQuery):
 async def cbstop(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 المسؤول الوحيد الذي لديه إذن إدارة الدردشات الصوتية يمكنه النقر على هذا الزر !", show_alert=True)
+        return await query.answer("💡 المشرف الوحيد الذي لديه إذن إدارة الدردشات الصوتية يمكنه النقر على هذا الزر ", show_alert=True)
     chat_id = query.message.chat.id
     if chat_id in QUEUE:
         try:
@@ -230,7 +230,7 @@ async def cbstop(_, query: CallbackQuery):
 async def cbmute(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 المسؤول الوحيد الذي لديه إذن إدارة الدردشات الصوتية يمكنه النقر على هذا الزر !", show_alert=True)
+        return await query.answer("💡 المشرف الوحيد الذي لديه إذن إدارة الدردشات الصوتية يمكنه النقر على هذا الزر ", show_alert=True)
     chat_id = query.message.chat.id
     if chat_id in QUEUE:
         try:
@@ -249,7 +249,7 @@ async def cbmute(_, query: CallbackQuery):
 async def cbunmute(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 المسؤول الوحيد الذي لديه إذن إدارة الدردشات الصوتية يمكنه النقر على هذا الزر !", show_alert=True)
+        return await query.answer("💡 المشرف الوحيد الذي لديه إذن إدارة الدردشات الصوتية يمكنه النقر على هذا الزر ", show_alert=True)
     chat_id = query.message.chat.id
     if chat_id in QUEUE:
         try:
