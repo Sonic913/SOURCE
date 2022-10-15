@@ -31,7 +31,7 @@ async def update_admin(client, message):
         new_admins.append(u.user.id)
     admins[message.chat.id] = new_admins
     await message.reply_text(
-        "✅ تم إعادة تحميل البوت ** بشكل صحيح! **  \n✅ ** تم تحديث قائمة المسؤولين ** **! ** "
+        "✅ تم تحديث البوت بنجاح! **  \n✅ ** تم تحديث قائمة المسؤولين ** **! ** "
     )
 
 
@@ -118,7 +118,7 @@ async def pause(client, m: Message):
 
 
 @Client.on_message(
-    command(["كمل", f"/resume@{BOT_USERNAME}", "vresume"]) & other_filters
+    command(["اكمل", f"/resume@{BOT_USERNAME}", "vresume"]) & other_filters
 )
 @authorized_users_only
 async def resume(client, m: Message):
