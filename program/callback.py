@@ -29,7 +29,7 @@ async def cbstart(_, query: CallbackQuery):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("طريقة التشغيل", callback_data="cbhowtouse")
+                    InlineKeyboardButton("طريقة التشغيل", callback_data="cbhowtouse"),
                     InlineKeyboardButton("الحساب المساعد", url=f"https://t.me/{ASSISTANT_NAME}"),
                     ],
                 [
