@@ -174,7 +174,7 @@ async def cbsudo(_, query: CallbackQuery):
 async def cbmenu(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 المسؤول الوحيد الذي لديه إذن إدارة الدردشات الصوتية يمكنه النقر على هذا الزر !", show_alert=True)
+        return await query.answer("💡 المشرف الوحيد الذي لديه إذن إدارة الدردشات الصوتية يمكنه النقر على هذا الزر ", show_alert=True)
     chat_id = query.message.chat.id
     user_id = query.message.from_user.id
     buttons = menu_markup(user_id)
@@ -192,5 +192,5 @@ async def cbmenu(_, query: CallbackQuery):
 async def close(_, query: CallbackQuery):
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("💡 المسؤول الوحيد الذي لديه إذن إدارة الدردشات الصوتية يمكنه النقر على هذا الزر !", show_alert=True)
+        return await query.answer("💡 المشرف الوحيد الذي لديه إذن إدارة الدردشات الصوتية يمكنه النقر على هذا الزر ", show_alert=True)
     await query.message.delete()
