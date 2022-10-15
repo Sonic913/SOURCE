@@ -75,6 +75,7 @@ async def start_(client: Client, message: Message):
 
                 [
                     InlineKeyboardButton("طريقة التشغيل", callback_data="cbhowtouse")
+                    InlineKeyboardButton("الحساب المساعد", url=f"https://t.me/{ASSISTANT_NAME}"),
                     ],
                 [
                     InlineKeyboardButton("‹ اوامر التشغيل › ", callback_data="cbcmds"),
