@@ -16,6 +16,7 @@ from config import (
     BOT_TOKEN,
     DEV_PHOTO,
     DEV_NAME,
+    ASSISTANT_NAME,
     UPDATES_CHANNEL,
 )
 from program import __version__
