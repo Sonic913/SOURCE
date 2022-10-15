@@ -132,7 +132,7 @@ async def play(c: Client, m: Message):
                     await suhu.delete()
                     await m.reply_photo(
                         photo=f"{IMG_1}",
-                        caption=f"💡 ***-› تمت الاضافه في الانتظار** `{pos}`\n\n🏷 **-› العنوان : ** [{songname}]({link})`\n🎧 **-› طݪب :** {requester}",
+                        caption=f"💡 ***-› تمت الاضافه الى الانتظار** `{pos}`\n\n🏷 **-› العنوان : ** [{songname}]({link})`\n**⏱ المده :** `{duration}`\n🎧 **-› طݪب :** {requester}",
                         reply_markup=keyboard,
                     )
                 else:
@@ -150,7 +150,7 @@ async def play(c: Client, m: Message):
                         requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                         await m.reply_photo(
                             photo=f"{IMG_2}",
-                            caption=f"🏷 -› العنوان : [{songname}]({link})\n🎧 **-› طݪب :** {requester}",
+                            caption=f"🏷 -› العنوان : [{songname}]({link})\n**⏱ المده :** `{duration}`\n🎧 **-› طݪب :** {requester}",
                             reply_markup=keyboard,
                         )
                     except Exception as e:
