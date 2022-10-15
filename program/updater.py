@@ -73,6 +73,6 @@ async def update_repo(_, message: Message):
 async def restart_bot(_, message: Message):
     msg = await message.reply("`جارِ اعادة تشغيل البوت انتظر قليلاً...`")
     args = [sys.executable, "main.py"]
-    await msg.edit("✅ تمت عملية اعادة تشغيل البوت بنجاح\n\n• يمكنكم الان استخدام البوت بدون مشاكل.")
+    await msg.edit("✅ تمت عملية اعادة تشغيل البوت بنجاح\n\n• يمكنكم الان استخدام البوت بدون مشاكل")
     execle(sys.executable, *args, environ)
     return
