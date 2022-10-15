@@ -13,6 +13,18 @@ from pytgcalls.types.input_stream.quality import (
 )
 from pytgcalls.types.stream import StreamAudioEnded
 
+def ytsearch(query: str):
+    try:
+        search = VideosSearch(query, limit=1).result()
+        data = search["result"][0]
+        songname = data["title"]
+        url = data["link"]
+        duration = data["duration"]
+        thumbnail = f"https://i.ytimg.com/vi/{data['id']}/hqdefault.jpg"
+        return [songname, url, duration, thumbnail]
+    except Exception as e:
+        print(e)
+        return 0
 
 keyboard = InlineKeyboardMarkup(
     [
