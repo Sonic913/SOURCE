@@ -102,7 +102,7 @@ async def start_(client: Client, message: Message):
 async def start(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/d6297ee78b8889a8d8ed1.jpg",
-        caption=f"""برمجة [SONIC](https://t.me/SONIC_source) 𖡼\nتمت البرمجة بواسطة سورس سونك𖡼\nf تابع قناة السورس لمشاهدة التحديثات 𖡼""",
+        caption=f"""برمجة [حسين](https://t.me/SONIC_source) \nتمت البرمجة بواسطة سورس سونك\n تابع قناة السورس لمشاهدة التحديثات """,
         reply_markup=InlineKeyboardMarkup(
          [
             [
@@ -125,7 +125,7 @@ async def ping_pong(client: Client, message: Message):
     start = time()
     m_reply = await message.reply_text("pinging...")
     delta_ping = time() - start
-    await m_reply.edit_text("🏓 `PING!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
+    await m_reply.edit_text("🏓 `PING `\n" f"⚡️ `{delta_ping * 1000:.3f} ms`\n\n" f"⚡ كل ما قل الرقم كان افضل")
 
 
 @Client.on_message(command(["فحص", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)
@@ -135,8 +135,8 @@ async def get_uptime(client: Client, message: Message):
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
         "🤖 حالة البوت:\n"
-        f"• **وقت التشغيل:** `{uptime}`\n"
-        f"• **وقت البدء:** `{START_TIME_ISO}`"
+        f"• **وقت التشغيل :** `{uptime}`\n"
+        f"• **وقت البدء :** `{START_TIME_ISO}`"
     )
 
 
