@@ -58,10 +58,10 @@ def updater():
 @sudo_users_only
 async def update_repo(_, message: Message):
     chat_id = message.chat.id
-    msg = await message.reply("🔄 `تتم البرمجه بواسطة سورس سونك......`")
+    msg = await message.reply("🔄 `جاري البرمجه بواسطة سورس سونك......`")
     update_avail = updater()
     if update_avail:
-        await msg.edit("✅ update finished\n\n• bot restarted, back active again in 1 minutes.")
+        await msg.edit("✅ تمت البرمجة بنجاح\n\n• جاري اعادة تشغيل البوت, سيعود البوت للعمل خلال دقيقه.")
         system("git pull -f && pip3 install --no-cache-dir -r requirements.txt")
         execle(sys.executable, sys.executable, "main.py", environ)
         return
@@ -73,6 +73,6 @@ async def update_repo(_, message: Message):
 async def restart_bot(_, message: Message):
     msg = await message.reply("`جارِ اعادة تشغيل البوت انتظر قليلاً...`")
     args = [sys.executable, "main.py"]
-    await msg.edit("✅ تمت عملية اعادة تشغيل البوت بنجاح\n\n• يمكنكم الان استخدام البوت بدون مشاكل")
+    await msg.edit("✅ تمت عملية اعادة تشغيل البوت بنجاح\n\n• الان يمكنكم استخدام البوت بدون مشاكل")
     execle(sys.executable, *args, environ)
     return
