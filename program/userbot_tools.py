@@ -21,7 +21,7 @@ async def join_chat(c: Client, m: Message):
                 "https://t.me/+", "https://t.me/joinchat/"
             )
             await user.join_chat(invitelink)
-            return await user.send_message(chat_id, "✅ تمت عملية الانضمام للمجموعه بنجاح")
+            return await user.send_message(chat_id, "✅ تمت عملية الانضمام الى المجموعه بنجاح")
     except UserAlreadyParticipant:
         return await user.send_message(chat_id, "🙂 قد انضممت الى المجموعة مسبقاً")
 
@@ -36,7 +36,7 @@ async def leave_chat(_, m: Message):
         await user.leave_chat(chat_id)
         return await _.send_message(
             chat_id,
-            "✅ غادر الحساب المساعد المجموعه بنجاح",
+            "✅ تمت عملية المغادرة من المجموعه بنجاح",
         )
     except UserNotParticipant:
         return await _.send_message(
