@@ -31,7 +31,7 @@ async def update_admin(client, message):
         new_admins.append(u.user.id)
     admins[message.chat.id] = new_admins
     await message.reply_text(
-        "✅ تم إعادة تحديث البوت ** بشكل صحيح! **  \n✅ ** تم تحديث قائمة المشرفين ** **! ** "
+        "✅ تم إعادة تحديث البوت **! **  \n✅ ** تم تحديث قائمة المشرفين ** **! ** "
     )
 
 
@@ -100,7 +100,7 @@ async def stop(client, m: Message):
 
 
 @Client.on_message(
-    command(["توقف", f"/pause@{BOT_USERNAME}", "vpause"]) & other_filters
+    command(["توقف", f"/pause@{BOT_USERNAME}"]) & other_filters
 )
 @authorized_users_only
 async def pause(client, m: Message):
@@ -118,7 +118,7 @@ async def pause(client, m: Message):
 
 
 @Client.on_message(
-    command(["اكمل", f"/resume@{BOT_USERNAME}", "vresume"]) & other_filters
+    command(["اكمل", f"/resume@{BOT_USERNAME}"]) & other_filters
 )
 @authorized_users_only
 async def resume(client, m: Message):
@@ -136,7 +136,7 @@ async def resume(client, m: Message):
 
 
 @Client.on_message(
-    command(["/mute", f"/mute@{BOT_USERNAME}", "vmute"]) & other_filters
+    command(["/mute", f"/mute@{BOT_USERNAME}"]) & other_filters
 )
 @authorized_users_only
 async def mute(client, m: Message):
@@ -154,7 +154,7 @@ async def mute(client, m: Message):
 
 
 @Client.on_message(
-    command(["رفع الكتم", f"/unmute@{BOT_USERNAME}", "vunmute"]) & other_filters
+    command(["رفع الكتم", f"/unmute@{BOT_USERNAME}"]) & other_filters
 )
 @authorized_users_only
 async def unmute(client, m: Message):
