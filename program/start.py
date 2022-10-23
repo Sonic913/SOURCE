@@ -68,7 +68,7 @@ async def start_(client: Client, message: Message):
 
 ⌔︙ لمعرفة اوامر البوت اضغط على › اوامر البوت
 
-⌔︙ لمعرفة كيفية تشغيل  البوت اضغط على › طريقة التشغيل
+⌔︙ لمعرفة طريقة تشغيل البوت اضغط على › طريقة التشغيل
 """,
         reply_markup=InlineKeyboardMarkup(
             [
