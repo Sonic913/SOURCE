@@ -31,7 +31,7 @@ async def clear_raw(_, message: Message):
         for file in os.listdir(raw):
             if file.endswith('.raw'):
                 os.remove(os.path.join(raw, file))
-        await message.reply_text("✅ **تم تنظيف و مسح الملفات الزائده**")
+        await message.reply_text("✅ **تم مسح الملفات الزائده**")
     else:
         await message.reply_text("❌ **لا توجد ملفات زائده لتنظيفها**")
 
@@ -45,6 +45,6 @@ async def cleanup(_, message: Message):
     if ls_dir:
         for dta in os.listdir(pth):
             os.system("rm -rf *.raw *.jpg")
-        await message.reply_text("✅ **تم التنظيف**")
+        await message.reply_text("✅ **تم التنظيف بنجاح**")
     else:
         await message.reply_text("✅ **اكتملت عملية التنظيف بالكامل**")
