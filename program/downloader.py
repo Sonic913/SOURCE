@@ -133,20 +133,3 @@ async def vsong(client, message):
         await msg.delete()
     except Exception as e:
         print(e)
-
-
-@Client.on_message(command(["lyric", f"ابحث"]))
-async def lyrics(_, message):
-    try:
-        if len(message.command) < 2:
-            await message.reply_text("» **قم باارسال اسم المقطع**")
-            return
-        query = message.text.split(None, 1)[1]
-        rep = await message.reply_text("🔎 **جاري البحث عن كلمات...**")
-        resp = requests.get(
-            f"https://api-tede.herokuapp.com/api/lirik?l={query}"
-        ).json()
-        result = f"{resp['data']}"
-        await rep.edit(result)
-    except Exception:
-        await rep.edit("❌ **لم يتم العثور على نتائج كلمات غنائية**\n\n» **يرجى إعطاء اسم أغنية صالح**")
