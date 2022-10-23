@@ -15,11 +15,11 @@ async def ytsearch(_, message: Message):
     text = ""
     for i in range(5):
         try:
-            text += f"🏷 **الاسم:** __{results[i]['title']}__\n"
-            text += f"⏱ **المده:** `{results[i]['duration']}`\n"
-            text += f"👀 **المشاهدات:** `{results[i]['views']}`\n"
-            text += f"📣 **القناه:** {results[i]['channel']}\n"
-            text += f"🔗 **الرابط:**: https://www.youtube.com{results[i]['url_suffix']}\n\n"
+            text += f"🏷 **الاسم : ** __{results[i]['title']}__\n"
+            text += f"⏱ **المده : ** `{results[i]['duration']}`\n"
+            text += f"👀 **المشاهدات : ** `{results[i]['views']}`\n"
+            text += f"📣 **القناة : ** {results[i]['channel']}\n"
+            text += f"🔗 **الرابط : **: https://www.youtube.com{results[i]['url_suffix']}\n\n"
         except IndexError:
             break
     await m.edit_text(
