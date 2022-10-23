@@ -20,34 +20,34 @@ from config import (
 async def cbstart(_, query: CallbackQuery):
     await query.answer("الصفحه الرئيسيه")
     await query.edit_message_text(
-        f"""✨ **مرحباً »「 [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) 」**\n
- **⌔︙انا بوت استطيع تشغيل الاغاني والموسيقى في المكالمات  الصوتية 
+        f"""✨ **هَــْـْـْْـلاّ »「 [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) 」**\n
+ **⌔︙انا بوت تشغيل الموسيقى في المكالمات المرئيه 
 
-⌔︙ لمعرفة اوامر هذا البوت اضغط على » ‹اوامر التشغيل›
+⌔︙ لمعرفة اوامر البوت اضغط على » اوامر البوت
 
-⌔︙ لمعرفة طريقة تشغيل هذا البوت اضغط على » طريقة التشغيل
+⌔︙ لمعرفة طريقة تشغيل البوت اضغط على » طريقة التشغيل
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("طريقة التشغيل", callback_data="cbhowtouse"),
-                    InlineKeyboardButton("الحساب المساعد", url=f"https://t.me/{ASSISTANT_NAME}"),
+                    InlineKeyboardButton("✦ طريقة التشغيل ✦", callback_data="cbhowtouse"),
+                    InlineKeyboardButton("✦ الحساب المساعد ✦", url=f"https://t.me/{ASSISTANT_NAME}"),
                     ],
                 [
-                    InlineKeyboardButton("‹ اوامر التشغيل › ", callback_data="cbcmds"),
-                    InlineKeyboardButton("❤️ المطور", url=f"https://t.me/{OWNER_NAME}"),
+                    InlineKeyboardButton("✦ اوامر البوت ✦", callback_data="cbcmds"),
+                    InlineKeyboardButton("✦ مطور البوت ✦", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "‹ مجموعة الدعم ›", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "✦ مجموعة الدعم ✦", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "‹ قناة السورس ›", url=f"https://t.me/SONIC_source"
+                        "✦ قناة السورس ✦", url=f"https://t.me/SONIC_source"
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "ضيـف البـوت لمجمـوعتـك ✅",
+                        "✦ اضف البـوت الى مجموعتك✦",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true"
                     )
                 ],
