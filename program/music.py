@@ -39,20 +39,20 @@ async def ytdl(format: str, link: str):
     return 0, stderr
 
 
-@Client.on_message(command(["تشغيل","شغل","play","/play","ش", f"play@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["تشغيل","استماع","play","/play","ش", f"play@{BOT_USERNAME}"]) & other_filters)
 async def play(c: Client, m: Message):
     await m.delete()
     do = requests.get(f"https://api.telegram.org/bot{BOT_TOKEN}/getChatMember?chat_id=@{UPDATES_CHANNEL}&user_id={m.from_user.id}").text
     if do.count("left") or do.count("Bad Request: user not found"):
-        await m.reply_text(f" ** ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉**\n@{UPDATES_CHANNEL}\n» **اشتࢪك بقناة البوت لتستطيع تشغيل الموسيقى**")
+        await m.reply_text(f" ** ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉**\n@{UPDATES_CHANNEL}\n» **انضم بقناة البوت لتستطيع تشغيل الموسيقى**")
     else:
         replied = m.reply_to_message
         chat_id = m.chat.id
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(text="• التحكم", callback_data="cbmenu"),
-                    InlineKeyboardButton(text="•اغلاق", callback_data="cls"),
+                    InlineKeyboardButton(text="✦ قائمة التحكم ✦", callback_data="cbmenu"),
+                    InlineKeyboardButton(text="✦ اغلاق ✦", callback_data="cls"),
                 ]
             ]
         )
