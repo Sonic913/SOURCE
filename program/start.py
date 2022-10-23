@@ -66,24 +66,24 @@ async def start_(client: Client, message: Message):
         caption=f"""✨ **هَــْـْـْْـلاّ » 「 {message.from_user.mention()} 」**\n
  **⌔︙انا بوت تشغيل الموسيقى في المكالمات المرئية 
 
-⌔︙ لمعرفة اوامر هذا البوت اضغط على › اوامر التشغيل
+⌔︙ لمعرفة اوامر البوت اضغط على › اوامر البوت
 
-⌔︙ لمعرفة اوامر تشغيل هذا البوت اضغط على › طريقة التشغيل
+⌔︙ لمعرفة كيفية تشغيل  البوت اضغط على › طريقة التشغيل
 """,
         reply_markup=InlineKeyboardMarkup(
             [
 
                 [
                     InlineKeyboardButton("طريقة التشغيل", callback_data="cbhowtouse"),
-                    InlineKeyboardButton("💚 الحساب المساعد", url=f"https://t.me/{ASSISTANT_NAME}"),
+                    InlineKeyboardButton("الحساب المساعد", url=f"https://t.me/{ASSISTANT_NAME}"),
                     ],
                 [
-                    InlineKeyboardButton("‹ اوامر التشغيل › ", callback_data="cbcmds"),
-                    InlineKeyboardButton("❤️ المطور", url=f"https://t.me/{OWNER_NAME}"),
+                    InlineKeyboardButton("اوامر البوت", callback_data="cbcmds"),
+                    InlineKeyboardButton("المطور", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "‹ مجموعة الدعم › ", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "‹ مجموعة الدعم ›", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
                         "‹ قناة السورس ›", url=f"https://t.me/SONIC_source"
