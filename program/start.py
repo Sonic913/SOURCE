@@ -100,11 +100,11 @@ async def start_(client: Client, message: Message):
     )
 
 
-@Client.on_message(command(["مبرمج السورس", f"source", f"سورس", f"السورس"]) & filters.group & ~filters.edited)
+@Client.on_message(command(["مطور السورس", f"source", f"سورس", f"السورس"]) & filters.group & ~filters.edited)
 async def start(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/d6297ee78b8889a8d8ed1.jpg",
-        caption=f"""مبرمج السورس [حسين](https://t.me/SONIC_source) \nتمت البرمجة من قبل سورس سونك\n تابع قناة السورس لمعرفة التحديثات """,
+        caption=f"""مطور السورس [حسين](https://t.me/SONIC_source) \n\nتمت البرمجة من قبل سورس سونك\n\n تابع قناة السورس لمعرفة التحديثات """,
         reply_markup=InlineKeyboardMarkup(
          [
             [
